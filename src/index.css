@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700|Roboto+Slab:700');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;800&display=swap');
+
+:root{
+    --blue: #37affa;
+    --light-blue: #37affa85;
+    --grey: #cacaca;
+    --light-grey: #cacaca2a;
+    --nav-text: #404040;
+    --radius: 20px;
+}
+
+html{
+    background: linear-gradient(0, #e3e3e3, transparent);
+    min-height: 100vh;
+    width: 100vw;
+}
+
+body{
+    margin: 40px;
+    background: white;
+    border-radius: var(--radius);
+}
+
+* {
+    font-family: 'Mulish';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat";
+}
+
+p, li{
+    font-weight: 200;
+}
+
+strong {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+header h1 {
+    background: url(assets/images/beau-tir-lac-cristallin-cote-base-montagne-enneigee-au-cours-journee-ensoleillee.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 70px 30px 30px 30px;
+    color: white;
+    text-shadow: 0 0 8px white;
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+nav {
+    background: var(--grey);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0px 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+li {
+    display: block;
+}
+
+li a {
+    color: var(--nav-text);
+}
+
+li.active {
+    background: white;
+}
+
+li.active a {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+main {
+    display: flex;
+    padding: 30px;
+    gap: 50px;
+}
+
+section#articles {
+    width: 100%;
+}
+
+article {
+    margin-bottom: 60px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+header h2 {
+    border-bottom: 1px solid var(--grey);
+    margin-bottom: 4px;
+}
+
+header p {
+    margin: 0;
+    text-align: right;
+    font-style: italic;
+    color: var(--grey);
+}
+
+aside {
+    width: 33%;
+}
+
+aside li {
+    margin: 20px 0;
+}
+
+aside div:first-child {
+    border-radius: var(--radius);
+    box-shadow: 0 0 12px 0px var(--grey);
+}
+
+aside h3 {
+    background: var(--blue);
+    color: white;
+    margin: 0;
+    padding: 20px 20px 10px 20px;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+aside ul {
+    padding: 0 0 20px 0;
+    margin: 0 0 0 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--grey);
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+#logo{
+    padding: 20px;
+}
+
+article img {
+    width: 100%;
+    height: 100%;
+}
+
+.sketches{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.sketches img{
+    width: 50%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    text-align: left;
+    font-weight: 200;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+th {
+    background: var(--blue);
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+tr {
+    border-bottom: 1px solid var(--grey);
+}
+
+tr:hover {
+    background: var(--light-blue)!important;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: var(--light-grey);
+}
+
+td {
+    padding: 10px;
+}
+
+td:first-child {
+    width: 40%;
+}
+
+td:last-child{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.section-title::before{
+    content: "➡️";
+    margin-right: 6px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.e404{
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    :root{
+        --radius: 0px;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    header h1{
+        font-size: 3em;
+    }
+
+    main {
+        display: block;
+        min-height: 60vh;
+    }
+
+    aside{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #logo{
+        width: 150px;
+    }
+
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    :root{
+        --radius: 0px;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    header h1{
+        font-size: 2em;
+    }
+
+    main {
+        display: block;
+        min-height: 60vh;
+    }
+
+    aside{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #logo{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    header h1 {
+        font-size: 2em;
+        background-position: top;
+        padding: 40px 30px 20px 30px;
+    }
+
+    main {
+        min-height: 65vh;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li:not(.hamburger){
+        display: none;
+    }
+
+    nav:hover li:not(.hamburger){
+        display: block;
+    }
+
+    #logo{
+        width: 150px;
+    }
+}
+
